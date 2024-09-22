@@ -41,7 +41,6 @@ async def create_upload_file(file: UploadFile):
         f.write(img)
 
     sql = "INSERT INTO image_processing(file_name, file_path, request_time, request_user) VALUES(%s, %s, %s, %s)"
-    
     import jigeum.seoul 
     from mnist.db import dml
     insert_row = dml(sql, file_name, file_full_path, jigeum.seoul.now(), 'n99')
@@ -79,6 +78,8 @@ def many(size: int = -1):
             result = cursor.fetchmany(size)
 
     return result
+
+
 
 
 
