@@ -3,7 +3,7 @@ name = "mnist"
 version = "0.5.0"
 description = "MNIST"
 authors = [
-    {name = "dMario24", email = "data.mario24@gmail.com"},
+    {name = "HaramSs", email = "haram8274@gmail.com"},
 ]
 dependencies = [
     "fastapi>=0.114.1",
