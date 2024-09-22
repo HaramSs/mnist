@@ -1,15 +1,22 @@
 [project]
 name = "mnist"
-version = "0.1.0"
-description = "Default template for PDM package"
+version = "0.2.0"
+description = "MNIST"
 authors = [
     {name = "HaramSs", email = "haram8274@gmail.com"},
 ]
-dependencies = []
-requires-python = "==3.11.*"
+dependencies = [
+    "fastapi>=0.114.1",
+    "uvicorn[standard]>=0.30.6",
+    "python-multipart>=0.0.9",
+]
+requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
 
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
 
 [tool.pdm]
-distribution = false
+distribution = true
