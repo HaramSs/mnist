@@ -23,9 +23,9 @@ def run():
     # LINE 으로 처리 결과 전송
     import requests   
     api_url = "https://notify-api.line.me/api/notify"
-    token = os.getenv('LINE_TOKEN','false')
-
-    headers = {'Authorization':'Bearer '+token}
+    token = os.getenv('LINE_TOKEN')
+    headers = {'Authorization':'Bearer '+ token}
+    print(headers)
 
     message = {
        "message" : f"{jigeum.seoul.now()}:task done successful"
