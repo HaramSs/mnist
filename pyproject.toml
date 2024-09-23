@@ -10,7 +10,7 @@ dependencies = [
     "uvicorn[standard]>=0.30.6",
     "python-multipart>=0.0.9",
     "PyMySQL>=1.1.1",
-    "jigeum>=1.0.0",
+    "jigeum>=1.0.2",
 ]
 requires-python = ">=3.11"
 readme = "README.md"
