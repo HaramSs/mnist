@@ -5,7 +5,11 @@ from PIL import Image
 from keras.models import load_model
 
 # 모델 로드
-model = load_model('/home/haram/code/mnist/note/mnist240924.keras')  # 학습된 모델 파일 경로
+
+# file_path = __file__
+# file_dir = os.path.dirname(model_path)
+
+model = load_model('./mnist240924.keras')  # 학습된 모델 파일 경로
 
 # 사용자 이미지 불러오기 및 전처리
 def preprocess_image(image_path):
