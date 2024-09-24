@@ -22,7 +22,7 @@ def run():
     insert_row=dml(sql, rnum, num)
     # 동시에 prediction_model, prediction_time 도 업데이트
     sql= "UPDATE image_processing SET prediction_model= %s,prediction_time=%s WHERE num = %s"
-    insert_row=dml(sql,f"model{rnum}.pkl",jigeum.seoul.now(),result[0]['num'])
+    insert_row=dml(sql,'n19',jigeum.seoul.now(),result[0]['num'])
 
     # STEP 3
     # LINE 으로 처리 결과 전송
