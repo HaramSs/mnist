@@ -11,6 +11,6 @@ COPY src/mnist/main.py /code/
 COPY run.sh /code/run.sh
 COPY note/mnist240924.keras /code
 
-RUN pip install --no-cache-dir --upgrade git+https://github.com/HaramSs/mnist.git@0.7.0
+RUN pip install --no-cache-dir --upgrade git+https://github.com/HaramSs/mnist.git@0.4/Tensorflow
 
 CMD ["sh", "run.sh"]
