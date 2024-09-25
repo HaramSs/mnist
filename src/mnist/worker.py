@@ -77,11 +77,15 @@ def send_noti(num=999):
     api_url = "https://notify-api.line.me/api/notify"
     token = os.getenv('LINE_TOKEN')
     headers = {'Authorization':'Bearer '+ token}
-    print(headers)
+    
+    job=get_job_img_task()
+    file_path=job['file_path']
+    rnum= predict_digit(file_path) 
+    
 
-    message = {
-       "message" : f"{jigeum.seoul.now()}:task done successful=>{num}"
-    }
+    message={
+        "message": f"{jigeum.seoul.now()}: 작업에 성공, result={rnum}"
+            }
 
     r = requests.post(api_url, headers= headers , data = message)
     print(r)
