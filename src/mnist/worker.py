@@ -40,7 +40,7 @@ def predict_digit(image_path):
 
 def prediction(file_path, num):
     from mnist.db import dml
-    sql="update image_processing set prediction_result=%s, prediction_model='n15', prediction_time=%s where num=%s"
+    sql="update image_processing set prediction_result=%s, prediction_model='n19', prediction_time=%s where num=%s"
     job=get_job_img_task()
     file_path=job['file_path']
     presult=predict_digit(file_path)
