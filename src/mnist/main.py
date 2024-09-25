@@ -44,7 +44,7 @@ async def create_upload_file(file: UploadFile):
     with open(file_full_path, "wb") as f:
         f.write(img)
 
-    sql = "INSERT INTO image_processing(file_name, label, file_path, request_time, request_user) VALUES(%s, %s, %s, %s)"
+    sql = "INSERT INTO image_processing(file_name, label, file_path, request_time, request_user) VALUES(%s, %s, %s, %s, %s)"
     from mnist.db import dml
     insert_row = dml(sql, file_name, label, file_full_path, jigeum.seoul.now(), 'n19')
     
